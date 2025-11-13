@@ -1,5 +1,6 @@
 ﻿// RecorderController.cs
 using System;
+using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
@@ -18,8 +19,7 @@ namespace ScreenRecorderTray
         private State _state = State.Idle;
         private HelperOverlayWindow? _helper;
         private ScreenRecorder? _recorder;
-        private CancellationTokenSource? _uploadCts;
-        private Task<string>? _uploadTask;
+        private string? _currentFilePath;
 
         public void ToggleRecording()
         {
@@ -38,7 +38,6 @@ namespace ScreenRecorderTray
         {
             _state = State.Selecting;
 
-            // Must run on WPF dispatcher
             Application.Current.Dispatcher.Invoke(() =>
             {
                 Rect region = RegionSelectionWindowHelpers.SelectScreenRegion();
@@ -52,15 +51,13 @@ namespace ScreenRecorderTray
                 _helper.Show();
 
                 _recorder = new ScreenRecorder(region);
-                _uploadCts = new CancellationTokenSource();
 
-                string tempFile = System.IO.Path.Combine(
-                    System.IO.Path.GetTempPath(),
+                string tempFile = Path.Combine(
+                    Path.GetTempPath(),
                     $"capture_{DateTime.UtcNow:yyyyMMdd_HHmmss}.mp4");
 
+                _currentFilePath = tempFile;
                 _recorder.Start(tempFile);
-
-                _uploadTask = Task.Run(() => Uploader.UploadFileAsync(tempFile, _uploadCts.Token));
 
                 _state = State.Recording;
             });
@@ -79,15 +76,22 @@ namespace ScreenRecorderTray
                 _helper = null;
             }
 
+            if (string.IsNullOrEmpty(_currentFilePath) || !File.Exists(_currentFilePath))
+            {
+                System.Diagnostics.Debug.WriteLine("No recording file to upload.");
+                return;
+            }
+            /*
             string? url = null;
+
             try
             {
-                if (_uploadTask != null)
-                    url = await _uploadTask;
+                // upload synchronously after ffmpeg is done
+                url = await Uploader.UploadFileAsync(_currentFilePath, CancellationToken.None);
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine("Upload failed: " + ex.Message);
+                System.Diagnostics.Debug.WriteLine("Upload failed: " + ex);
             }
 
             if (!string.IsNullOrEmpty(url))
@@ -96,7 +100,7 @@ namespace ScreenRecorderTray
                 {
                     Clipboard.SetText(url);
                 });
-            }
+            }*/
         }
     }
 }

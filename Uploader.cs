@@ -1,10 +1,12 @@
 ﻿// Uploader.cs
+using System;
 using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace ScreenRecorderTray
 {
@@ -12,17 +14,20 @@ namespace ScreenRecorderTray
     {
         private static readonly HttpClient Client = new HttpClient
         {
-            Timeout = System.TimeSpan.FromMinutes(30)
+            Timeout = TimeSpan.FromMinutes(30)
         };
 
         public static async Task<string> UploadFileAsync(string path, CancellationToken ct)
         {
+            if (!File.Exists(path))
+                throw new FileNotFoundException("Capture file not found", path);
+
             using var form = new MultipartFormDataContent();
             using var file = new StreamContent(File.OpenRead(path));
             file.Headers.ContentType = MediaTypeHeaderValue.Parse("video/mp4");
             form.Add(file, "file", Path.GetFileName(path));
 
-            // TODO: change to your real endpoint
+            // TODO: change this to your real endpoint
             using var resp = await Client.PostAsync("https://your.server/upload", form, ct);
             resp.EnsureSuccessStatusCode();
 

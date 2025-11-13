@@ -10,4 +10,12 @@
 		<!-- IMPORTANT -->
 	</PropertyGroup>
 
+	<ItemGroup>
+	  <None Remove="ScreenRecorderTray.custom_icon.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EmbeddedResource Include="ScreenRecorderTray.custom_icon.png" />
+	</ItemGroup>
+
 </Project>
