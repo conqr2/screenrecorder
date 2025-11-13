@@ -1,0 +1,200 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\alexa\\source\\repos\\ScreenRecorderTray\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{40E0214D-E746-548E-8ED9-658B86AAA3DA}|ScreenRecorderTray.csproj|c:\\users\\alexa\\source\\repos\\screenrecordertray\\uploader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40E0214D-E746-548E-8ED9-658B86AAA3DA}|ScreenRecorderTray.csproj|solutionrelative:uploader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40E0214D-E746-548E-8ED9-658B86AAA3DA}|ScreenRecorderTray.csproj|c:\\users\\alexa\\source\\repos\\screenrecordertray\\screenrecorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40E0214D-E746-548E-8ED9-658B86AAA3DA}|ScreenRecorderTray.csproj|solutionrelative:screenrecorder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40E0214D-E746-548E-8ED9-658B86AAA3DA}|ScreenRecorderTray.csproj|c:\\users\\alexa\\source\\repos\\screenrecordertray\\recordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40E0214D-E746-548E-8ED9-658B86AAA3DA}|ScreenRecorderTray.csproj|solutionrelative:recordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40E0214D-E746-548E-8ED9-658B86AAA3DA}|ScreenRecorderTray.csproj|c:\\users\\alexa\\source\\repos\\screenrecordertray\\helperoverlaywindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40E0214D-E746-548E-8ED9-658B86AAA3DA}|ScreenRecorderTray.csproj|solutionrelative:helperoverlaywindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40E0214D-E746-548E-8ED9-658B86AAA3DA}|ScreenRecorderTray.csproj|c:\\users\\alexa\\source\\repos\\screenrecordertray\\helperoverlaywindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{40E0214D-E746-548E-8ED9-658B86AAA3DA}|ScreenRecorderTray.csproj|solutionrelative:helperoverlaywindow.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40E0214D-E746-548E-8ED9-658B86AAA3DA}|ScreenRecorderTray.csproj|c:\\users\\alexa\\source\\repos\\screenrecordertray\\regionselectionwindowhelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40E0214D-E746-548E-8ED9-658B86AAA3DA}|ScreenRecorderTray.csproj|solutionrelative:regionselectionwindowhelpers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40E0214D-E746-548E-8ED9-658B86AAA3DA}|ScreenRecorderTray.csproj|c:\\users\\alexa\\source\\repos\\screenrecordertray\\regionselectionwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40E0214D-E746-548E-8ED9-658B86AAA3DA}|ScreenRecorderTray.csproj|solutionrelative:regionselectionwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40E0214D-E746-548E-8ED9-658B86AAA3DA}|ScreenRecorderTray.csproj|c:\\users\\alexa\\source\\repos\\screenrecordertray\\hotkeywindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40E0214D-E746-548E-8ED9-658B86AAA3DA}|ScreenRecorderTray.csproj|solutionrelative:hotkeywindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40E0214D-E746-548E-8ED9-658B86AAA3DA}|ScreenRecorderTray.csproj|c:\\users\\alexa\\source\\repos\\screenrecordertray\\trayapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40E0214D-E746-548E-8ED9-658B86AAA3DA}|ScreenRecorderTray.csproj|solutionrelative:trayapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40E0214D-E746-548E-8ED9-658B86AAA3DA}|ScreenRecorderTray.csproj|c:\\users\\alexa\\source\\repos\\screenrecordertray\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{40E0214D-E746-548E-8ED9-658B86AAA3DA}|ScreenRecorderTray.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40E0214D-E746-548E-8ED9-658B86AAA3DA}|ScreenRecorderTray.csproj|c:\\users\\alexa\\source\\repos\\screenrecordertray\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40E0214D-E746-548E-8ED9-658B86AAA3DA}|ScreenRecorderTray.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HelperOverlayWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\alexa\\source\\repos\\ScreenRecorderTray\\HelperOverlayWindow.xaml",
+              "RelativeDocumentMoniker": "HelperOverlayWindow.xaml",
+              "ToolTip": "C:\\Users\\alexa\\source\\repos\\ScreenRecorderTray\\HelperOverlayWindow.xaml",
+              "RelativeToolTip": "HelperOverlayWindow.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-13T17:43:44.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HelperOverlayWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\alexa\\source\\repos\\ScreenRecorderTray\\HelperOverlayWindow.xaml.cs",
+              "RelativeDocumentMoniker": "HelperOverlayWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\alexa\\source\\repos\\ScreenRecorderTray\\HelperOverlayWindow.xaml.cs",
+              "RelativeToolTip": "HelperOverlayWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T17:41:48.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HotkeyWindow.cs",
+              "DocumentMoniker": "C:\\Users\\alexa\\source\\repos\\ScreenRecorderTray\\HotkeyWindow.cs",
+              "RelativeDocumentMoniker": "HotkeyWindow.cs",
+              "ToolTip": "C:\\Users\\alexa\\source\\repos\\ScreenRecorderTray\\HotkeyWindow.cs",
+              "RelativeToolTip": "HotkeyWindow.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T17:38:23.745Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TrayApp.cs",
+              "DocumentMoniker": "C:\\Users\\alexa\\source\\repos\\ScreenRecorderTray\\TrayApp.cs",
+              "RelativeDocumentMoniker": "TrayApp.cs",
+              "ToolTip": "C:\\Users\\alexa\\source\\repos\\ScreenRecorderTray\\TrayApp.cs",
+              "RelativeToolTip": "TrayApp.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAgAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T17:38:01.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\alexa\\source\\repos\\ScreenRecorderTray\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\Users\\alexa\\source\\repos\\ScreenRecorderTray\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-11-13T17:37:39.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\alexa\\source\\repos\\ScreenRecorderTray\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\Users\\alexa\\source\\repos\\ScreenRecorderTray\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T17:31:41.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Uploader.cs",
+              "DocumentMoniker": "C:\\Users\\alexa\\source\\repos\\ScreenRecorderTray\\Uploader.cs",
+              "RelativeDocumentMoniker": "Uploader.cs",
+              "ToolTip": "C:\\Users\\alexa\\source\\repos\\ScreenRecorderTray\\Uploader.cs",
+              "RelativeToolTip": "Uploader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T17:31:17.631Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RecorderController.cs",
+              "DocumentMoniker": "C:\\Users\\alexa\\source\\repos\\ScreenRecorderTray\\RecorderController.cs",
+              "RelativeDocumentMoniker": "RecorderController.cs",
+              "ToolTip": "C:\\Users\\alexa\\source\\repos\\ScreenRecorderTray\\RecorderController.cs",
+              "RelativeToolTip": "RecorderController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T17:30:16.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ScreenRecorder.cs",
+              "DocumentMoniker": "C:\\Users\\alexa\\source\\repos\\ScreenRecorderTray\\ScreenRecorder.cs",
+              "RelativeDocumentMoniker": "ScreenRecorder.cs",
+              "ToolTip": "C:\\Users\\alexa\\source\\repos\\ScreenRecorderTray\\ScreenRecorder.cs",
+              "RelativeToolTip": "ScreenRecorder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T17:30:49.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RegionSelectionWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\alexa\\source\\repos\\ScreenRecorderTray\\RegionSelectionWindow.xaml.cs",
+              "RelativeDocumentMoniker": "RegionSelectionWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\alexa\\source\\repos\\ScreenRecorderTray\\RegionSelectionWindow.xaml.cs",
+              "RelativeToolTip": "RegionSelectionWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T17:38:47.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RegionSelectionWindowHelpers.cs",
+              "DocumentMoniker": "C:\\Users\\alexa\\source\\repos\\ScreenRecorderTray\\RegionSelectionWindowHelpers.cs",
+              "RelativeDocumentMoniker": "RegionSelectionWindowHelpers.cs",
+              "ToolTip": "C:\\Users\\alexa\\source\\repos\\ScreenRecorderTray\\RegionSelectionWindowHelpers.cs",
+              "RelativeToolTip": "RegionSelectionWindowHelpers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T17:41:19.694Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
