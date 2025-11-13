@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Reflection.Metadata;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 using WinForms = System.Windows.Forms;
 
 namespace ScreenRecorderTray
 {
-    internal class HotkeyWindow : WinForms.NativeWindow, IDisposable
+    internal class HotkeyWindow : NativeWindow, IDisposable
     {
         private const int WM_HOTKEY = 0x0312;
 
@@ -19,10 +20,10 @@ namespace ScreenRecorderTray
 
         public HotkeyWindow()
         {
-            CreateHandle(new WinForms.CreateParams());
+            CreateHandle(new CreateParams());
         }
 
-        protected override void WndProc(ref WinForms.Message m)
+        protected override void WndProc(ref Message m)
         {
             if (m.Msg == WM_HOTKEY)
             {

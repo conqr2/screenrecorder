@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Windows;
+using System.Windows.Forms;
 using WinForms = System.Windows.Forms;
 
 namespace ScreenRecorderTray
 {
     public class TrayApp : IDisposable
     {
-        private readonly WinForms.NotifyIcon _trayIcon;
+        private readonly NotifyIcon _trayIcon;
         private readonly HotkeyWindow _messageWindow;
         private readonly RecorderController _controller;
 
@@ -21,7 +22,7 @@ namespace ScreenRecorderTray
 
             RegisterGlobalHotkey();
 
-            _trayIcon = new WinForms.NotifyIcon
+            _trayIcon = new NotifyIcon
             {
                 Visible = true,
                 Text = "Screen Recorder",
@@ -30,19 +31,18 @@ namespace ScreenRecorderTray
             };
         }
 
-        private WinForms.ContextMenuStrip BuildContextMenu()
+        private ContextMenuStrip BuildContextMenu()
         {
-            var menu = new WinForms.ContextMenuStrip();
+            var menu = new ContextMenuStrip();
             menu.Items.Add("Quit", null, (_, __) =>
             {
-                Application.Current.Shutdown();
+                System.Windows.Application.Current.Shutdown();
             });
             return menu;
         }
 
         private void RegisterGlobalHotkey()
         {
-            // Ctrl + Shift + R
             const uint MOD_CONTROL = 0x2;
             const uint MOD_SHIFT = 0x4;
             const uint VK_R = 0x52;
