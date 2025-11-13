@@ -7,6 +7,8 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/Dotnet.gitignore
 
+.vs/
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
@@ -52,3 +54,5 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+.vs/ScreenRecorderTray.slnx/FileContentIndex/194fb39b-ac32-4c1d-8d27-aba7d2c01ef4.vsidx
+/.vs
