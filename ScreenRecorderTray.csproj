@@ -11,11 +11,18 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="custom_icon.png" />
+	  <None Remove="custom_icon2.png" />
 	  <None Remove="ScreenRecorderTray.custom_icon.png" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <EmbeddedResource Include="ScreenRecorderTray.custom_icon.png" />
+	  <EmbeddedResource Include="custom_icon.png" />
+	  <EmbeddedResource Include="custom_icon2.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="NAudio" Version="2.2.1" />
 	</ItemGroup>
 
 </Project>

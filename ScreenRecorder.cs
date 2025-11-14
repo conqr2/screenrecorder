@@ -11,7 +11,6 @@ namespace ScreenRecorderTray
         private readonly Rect _region;
         private Process? _ffmpeg;
 
-        // Look for ffmpeg.exe in the same directory as the app
         private static readonly string FfmpegPath =
             Path.Combine(AppContext.BaseDirectory, "ffmpeg.exe");
 
@@ -20,7 +19,7 @@ namespace ScreenRecorderTray
             _region = region;
         }
 
-        public void Start(string outputPath)
+        public bool Start(string outputPath)
         {
             if (!File.Exists(FfmpegPath))
             {
@@ -29,43 +28,64 @@ namespace ScreenRecorderTray
                     "ScreenRecorder",
                     MessageBoxButton.OK,
                     MessageBoxImage.Error);
-                return;
+                return false;
             }
 
-            int x = (int)_region.X;
-            int y = (int)_region.Y;
-            int w = (int)_region.Width;
-            int h = (int)_region.Height;
+            int x = (int)Math.Round(_region.X);
+            int y = (int)Math.Round(_region.Y);
+            int w = (int)Math.Round(_region.Width);
+            int h = (int)Math.Round(_region.Height);
 
+            // Make dimensions even for x264
+            if ((w & 1) == 1) w--;
+            if ((h & 1) == 1) h--;
+
+            if (w <= 0 || h <= 0)
+            {
+                MessageBox.Show("Selected region is too small to record.",
+                    "ScreenRecorder",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error);
+                return false;
+            }
+
+            // VIDEO ONLY for now (no audio)
             string video =
-                $"-f gdigrab -framerate 30 -offset_x {x} -offset_y {y} -video_size {w}x{h} -draw_mouse 1 -i desktop";
+    $"-y -f gdigrab -framerate 30 -offset_x {x} -offset_y {y} -video_size {w}x{h} -draw_mouse 1 -i desktop";
 
-            // TODO: change to your real microphone device name.
-            // For now you can even comment out audio entirely to test.
-            //string audio = "-f dshow -i audio=\"Microphone (Your Mic Name Here)\"";
-            string audio = "";
+            // Microphone capture (replace device name with your own)
+            string audio =
+                "-f dshow -i audio=\"Headset (USB-C to 3.5mm Headphone Jack Adapter)\"";
 
-            string outArgs = "-c:v libx264 -preset veryfast -c:a aac -pix_fmt yuv420p";
+            // Encoding options: video + AAC audio
+            string outArgs = "-c:v libx264 -preset veryfast -pix_fmt yuv420p -c:a aac -b:a 128k";
+
+            string args = $"{video} {audio} {outArgs} \"{outputPath}\"";
 
             var psi = new ProcessStartInfo
             {
                 FileName = FfmpegPath,
-                Arguments = $"{video} {audio} {outArgs} \"{outputPath}\"",
+                Arguments = args,
                 UseShellExecute = false,
+                RedirectStandardInput = true,   // so we can send 'q'
+                RedirectStandardError = false,  // keep things simple
                 CreateNoWindow = true
             };
 
             try
             {
                 _ffmpeg = Process.Start(psi);
+                return _ffmpeg != null;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(
-                    "Failed to start ffmpeg:\n\n" + ex.Message,
+                    "Failed to start ffmpeg:\n\n" + ex,
                     "ScreenRecorder",
                     MessageBoxButton.OK,
                     MessageBoxImage.Error);
+                _ffmpeg = null;
+                return false;
             }
         }
 
@@ -77,12 +97,29 @@ namespace ScreenRecorderTray
             {
                 if (!_ffmpeg.HasExited)
                 {
-                    _ffmpeg.Kill();
+                    // Ask ffmpeg to stop like in the console
+                    try
+                    {
+                        _ffmpeg.StandardInput.WriteLine("q");
+                        _ffmpeg.StandardInput.Flush();
+                    }
+                    catch
+                    {
+                        // stdin may already be closed, that's fine
+                    }
+
+                    // Wait indefinitely for it to finish and flush the file
+                    _ffmpeg.WaitForExit();
                 }
             }
             catch
             {
-                // ignore
+                // don't care for now; file is what matters
+            }
+            finally
+            {
+                _ffmpeg.Dispose();
+                _ffmpeg = null;
             }
         }
     }

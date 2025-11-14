@@ -29,13 +29,19 @@ namespace ScreenRecorderTray
             {
                 Visible = true,
                 Text = "Screen Recorder",
-                 Icon = System.Drawing.SystemIcons.Application,  // Comment out or remove this line
+                Icon = System.Drawing.SystemIcons.WinLogo,  // Comment out or remove this line
                 ContextMenuStrip = BuildContextMenu()
             };
-            /*
+            
             var assembly = Assembly.GetExecutingAssembly();
-          //Console.Write(assembly.GetManifestResourceNames());
-            string resourceName = "ScreenRecorderTray.custom_icon.png";  // Replace with your actual embedded resource name (check via assembly.GetManifestResourceNames() if unsure)
+
+            var resourceNames = assembly.GetManifestResourceNames();
+            foreach (var name in resourceNames)
+            {
+                System.Diagnostics.Debug.WriteLine("Embedded resource: " + name);
+            }
+            //Console.Write(assembly.GetManifestResourceNames());
+            string resourceName = "ScreenRecorderTray.custom_icon2.png";  // Replace with your actual embedded resource name (check via assembly.GetManifestResourceNames() if unsure)
             using (Stream stream = assembly.GetManifestResourceStream(resourceName))
             {
                 if (stream == null)
@@ -46,7 +52,7 @@ namespace ScreenRecorderTray
                 {
                     _trayIcon.Icon = Icon.FromHandle(bmp.GetHicon());
                 }
-            }*/
+            }
         }
 
         private ContextMenuStrip BuildContextMenu()
